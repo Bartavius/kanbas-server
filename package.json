@@ -1,0 +1,33 @@
+{
+  "type": "module",
+  "name": "kanbas-node-server-app",
+  "version": "1.0.0",
+  "description": "Node.js HTTP Web server for the Kanbas application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bartavius/cs4550-test-server.git"
+  },
+  "keywords": [
+    "Node",
+    "REST",
+    "Server",
+    "HTTP",
+    "Web",
+    "Development",
+    "CS4550"
+  ],
+  "author": "Jirath Lojanarungsiri",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bartavius/cs4550-test-server/issues"
+  },
+  "homepage": "https://github.com/Bartavius/cs4550-test-server#readme",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "start": "node index.js"
+}
