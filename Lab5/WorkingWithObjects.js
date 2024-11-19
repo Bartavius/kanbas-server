@@ -42,6 +42,12 @@ const module = {
       module.name = newTitle;
       res.json(module);
     });
+    app.get("/lab5/module/description/:newDesc", (req, res) => {
+      const { newDesc } = req.params;
+      module.description = newDesc;
+      res.json(module);
+    });
+  
   
   
   };
