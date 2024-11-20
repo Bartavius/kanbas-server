@@ -27,6 +27,7 @@
   },
   "homepage": "https://github.com/Bartavius/cs4550-test-server#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.21.1"
   },
   "start": "node index.js"
