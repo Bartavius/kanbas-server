@@ -48,7 +48,5 @@ const module = {
       res.json(module);
     });
   
-  
-  
   };
   
