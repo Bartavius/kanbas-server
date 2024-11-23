@@ -22,7 +22,7 @@ export function createAssignment(courseId, assignmentId) {
 
     const formattedToday = formatDate(today);
     const formattedTomorrow = formatDate(tomorrow);
-    const formattedTwoDays = formatDate(twoDays);
+    const formattedTwoDays = formatDate(twoDays);//
 
     const assignment = {
       _id: assignmentId,
