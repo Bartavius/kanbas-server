@@ -15,7 +15,7 @@ export default function UserRoutes(app) {
     const status = dao.deleteUser(req.body._id);
     res.send(status);
   };
-  
+
   const findAllUsers = (req, res) => { };
   const findUserById = (req, res) => { };
 
@@ -44,7 +44,7 @@ export default function UserRoutes(app) {
     const currentUser = dao.findUserByCredentials(username, password);
     if (!currentUser) {
       res.status(401).json(
-        {message: "Unable to login. Try again later."}
+        {message: "Incorrect username or password."}
       );
       return;
     }

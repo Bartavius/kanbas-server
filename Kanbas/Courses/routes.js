@@ -24,6 +24,11 @@ export default function CourseRoutes(app) {
     const { courseId } = req.params;
     const courseUpdates = req.body;
     const status = dao.updateCourse(courseId, courseUpdates);
+    if (!status) {
+        res.status(400).json(
+          { message: "Please select a course to edit first." });
+        return;
+      }
     res.send(status);
   });
   app.get("/api/courses", (req, res) => {

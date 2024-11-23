@@ -9,8 +9,7 @@ export function enrollUserInCourse(userId, courseId) {
 export function unenrollUserFromCourse(userId, courseId) {
     const { enrollments } = Database;
     const targetUser = enrollments.find( (e) => e.user === userId && e.course === courseId );
-    Database.enrollments.splice( targetUser );
-    // Database.enrollments = enrollments.filter( (enrollment) => ! ( enrollment.user === userId && enrollment.course === courseId) )
+    Database.enrollments = enrollments.filter( (enrollment) => ! ( enrollment.user === userId && enrollment.course === courseId) )
     return targetUser;
   }
 
