@@ -2,11 +2,16 @@ import Database from "../Database/index.js";
 
 export function enrollUserInCourse(userId, courseId) {
   const { enrollments } = Database;
-  enrollments.push({ _id: Date.now().toString(), user: userId, course: courseId });
+  const newEnrollment = { _id: Date.now().toString(), user: userId, course: courseId };
+  enrollments.push(newEnrollment);
+  return newEnrollment;
 }
 export function unenrollUserFromCourse(userId, courseId) {
     const { enrollments } = Database;
-    Database.enrollments = enrollments.filter( (enrollment) => ! ( enrollment.user === userId && enrollment.course === courseId) )
+    const targetUser = enrollments.find( (e) => e.user === userId && e.course === courseId );
+    Database.enrollments.splice( targetUser );
+    // Database.enrollments = enrollments.filter( (enrollment) => ! ( enrollment.user === userId && enrollment.course === courseId) )
+    return targetUser;
   }
 
 export function getEnrollments() {
