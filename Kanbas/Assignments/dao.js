@@ -20,9 +20,9 @@ export function createAssignment(courseId, assignmentId) {
     const twoDays = new Date(tomorrow);
     twoDays.setDate(twoDays.getDate() + 1);
 
-    const formattedToday = formatDate({date: today});
-    const formattedTomorrow = formatDate({date : tomorrow });
-    const formattedTwoDays = formatDate({date: twoDays});
+    const formattedToday = formatDate(today);
+    const formattedTomorrow = formatDate(tomorrow);
+    const formattedTwoDays = formatDate(twoDays);
 
     const assignment = {
       _id: assignmentId,
