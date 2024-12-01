@@ -19,7 +19,7 @@ export function getEnrollments() {
   }
 
 export function findPeopleInCourse(courseId) {
-    const {users, enrollments} = Database;
+    const { users, enrollments } = Database;
     const peopleInCourse = users
         .filter((usr) =>
           enrollments.some((enrollment) => enrollment.user === usr._id && enrollment.course === courseId))
