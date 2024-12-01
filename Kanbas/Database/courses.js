@@ -1,3 +1,4 @@
+// this comment is just to add a commit + make a note on the commit message
 export default [
     {
         "name": "React JS",
