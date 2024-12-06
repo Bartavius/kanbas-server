@@ -3,21 +3,28 @@ import * as courseDao from "../Courses/dao.js";
 import * as enrollmentsDao from "../Enrollments/dao.js";
 
 export default function UserRoutes(app) {
-  const createUser = (req, res) => { 
-    const newUser = dao.createUser(req.body);
+  const createUser = async (req, res) => { 
+    const newUser = await dao.createUser(req.body);
     res.send(newUser); // check this
   };
   const updateUserById = (req, res) => {
     const updatedUser = dao.updateUser(req.body._id, req.body);
     res.send(updatedUser);
   };
-  const deleteUser = (req, res) => { 
-    const status = dao.deleteUser(req.body._id);
+  const deleteUser = async (req, res) => { 
+    const status = await dao.deleteUser(req.body._id);
     res.send(status);
   };
 
-  const findAllUsers = (req, res) => { };
-  const findUserById = (req, res) => { };
+  const findAllUsers = async (req, res) => {
+    const users = await dao.findAllUsers();
+    res.json(users);
+  };
+
+  const findUserById = async (req, res) => {
+    const user = await dao.findUserById(req.params.userId)
+    res.json(user);
+  };
 
 
   const updateUser = (req, res) => {
@@ -28,8 +35,8 @@ export default function UserRoutes(app) {
     req.session["currentUser"] = currentUser;
     res.json(currentUser);
   };
-  const signup = (req, res) => {
-    const user = dao.findUserByUsername(req.body.username);
+  const signup = async (req, res) => {
+    const user = await dao.findUserByUsername(req.body.username);
     if (user) {
       res.status(400).json(
         { message: "Username already in use" });
@@ -39,9 +46,9 @@ export default function UserRoutes(app) {
     req.session["currentUser"] = currentUser;
     res.json(currentUser);
   };
-  const signin = (req, res) => { 
+  const signin = async (req, res) => { 
     const { username, password } = req.body;
-    const currentUser = dao.findUserByCredentials(username, password);
+    const currentUser = await dao.findUserByCredentials(username, password);
     if (!currentUser) {
       res.status(401).json(
         {message: "Incorrect username or password."}
@@ -84,6 +91,7 @@ export default function UserRoutes(app) {
     enrollmentsDao.enrollUserInCourse(currentUser._id, newCourse._id);
     res.json(newCourse);
   };
+
 
   app.post("/api/users/signup", signup);
   app.post("/api/users/signin", signin);
