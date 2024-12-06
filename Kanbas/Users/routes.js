@@ -7,10 +7,6 @@ export default function UserRoutes(app) {
     const newUser = await dao.createUser(req.body);
     res.send(newUser); // check this
   };
-  const updateUserById = (req, res) => {
-    const updatedUser = dao.updateUser(req.body._id, req.body);
-    res.send(updatedUser);
-  };
   const deleteUser = async (req, res) => { 
     const status = await dao.deleteUser(req.body._id);
     res.send(status);
@@ -27,13 +23,13 @@ export default function UserRoutes(app) {
   };
 
 
-  const updateUser = (req, res) => {
+  const updateUser = async (req, res) => {
     const userId = req.params.userId;
     const userUpdates = req.body;
-    dao.updateUser(userId, userUpdates);
-    const currentUser = dao.findUserById(userId);
-    req.session["currentUser"] = currentUser;
-    res.json(currentUser);
+    const status = await dao.updateUser(userId, userUpdates);
+    // const currentUser = await dao.findUserById(userId); // why does the session change here?
+    // req.session["currentUser"] = currentUser;
+    res.json(status);
   };
   const signup = async (req, res) => {
     const user = await dao.findUserByUsername(req.body.username);
