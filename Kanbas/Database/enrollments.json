@@ -1,243 +1,483 @@
  [
     {
       "user": "123",
-      "course": "RS101"
+      "course": "RS101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "234",
-      "course": "RS101"
+      "course": "RS101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "345",
-      "course": "RS101"
+      "course": "RS101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "456",
-      "course": "RS101"
+      "course": "RS101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "567",
-      "course": "RS101"
+      "course": "RS101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "234",
-      "course": "RS102"
+      "course": "RS102",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "789",
-      "course": "RS102"
+      "course": "RS102",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "890",
-      "course": "RS102"
+      "course": "RS102",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "123",
-      "course": "RS102"
+      "course": "RS102",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "678",
-      "course": "RS103"
+      "course": "RS103",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "789",
-      "course": "RS103"
+      "course": "RS103",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "123",
-      "course": "CS101"
+      "course": "CS101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "123",
-      "course": "CS102"
+      "course": "CS102",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "567",
-      "course": "CS102"
+      "course": "CS102",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "123",
-      "course": "JPL101"
+      "course": "JPL101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "234",
-      "course": "JPL101"
+      "course": "JPL101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "345",
-      "course": "GEO101"
+      "course": "GEO101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "456",
-      "course": "GEO101"
+      "course": "GEO101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "567",
-      "course": "GUIT101"
+      "course": "GUIT101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "678",
-      "course": "GUIT101"
+      "course": "GUIT101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "789",
-      "course": "DNCE101"
+      "course": "DNCE101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "890",
-      "course": "DNCE101"
+      "course": "DNCE101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "777",
-      "course": "CHSS101"
+      "course": "CHSS101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "901",
-      "course": "CHSS101"
+      "course": "CHSS101",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "902",
-      "course": "RS104"
+      "course": "RS104",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "903",
-      "course": "RS104"
+      "course": "RS104",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "904",
-      "course": "RS105"
+      "course": "RS105",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "905",
-      "course": "RS105"
+      "course": "RS105",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "906",
-      "course": "RS106"
+      "course": "RS106",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "907",
-      "course": "RS106"
+      "course": "RS106",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "908",
-      "course": "RS107"
+      "course": "RS107",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "909",
-      "course": "RS107"
+      "course": "RS107",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "910",
-      "course": "RS108"
+      "course": "RS108",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "911",
-      "course": "RS108"
+      "course": "RS108",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "912",
-      "course": "RS109"
+      "course": "RS109",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "912",
-      "course": "RS109"
+      "course": "RS109",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "913",
-      "course": "RS110"
+      "course": "RS110",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "913",
-      "course": "RS110"
+      "course": "RS110",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "913",
-      "course": "RS111"
+      "course": "RS111",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "914",
-      "course": "RS111"
+      "course": "RS111",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "915",
-      "course": "RS112"
+      "course": "RS112",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "916",
-      "course": "RS112"
+      "course": "RS112",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "917",
-      "course": "RS113"
+      "course": "RS113",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "918",
-      "course": "RS113"
+      "course": "RS113",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "901",
-      "course": "RS114"
+      "course": "RS114",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "902",
-      "course": "RS114"
+      "course": "RS114",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "901",
-      "course": "RS115"
+      "course": "RS115",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "903",
-      "course": "RS115"
+      "course": "RS115",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "906",
-      "course": "RS116"
+      "course": "RS116",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "905",
-      "course": "RS116"
+      "course": "RS116",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "907",
-      "course": "RS117"
+      "course": "RS117",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "456",
-      "course": "RS117"
+      "course": "RS117",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "234",
-      "course": "RS118"
+      "course": "RS118",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "567",
-      "course": "RS118"
+      "course": "RS118",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "890",
-      "course": "RS119"
+      "course": "RS119",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "890",
-      "course": "RS119"
+      "course": "RS119",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "777",
-      "course": "RS120"
+      "course": "RS120",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "917",
-      "course": "RS120"
+      "course": "RS120",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "918",
-      "course": "RS121"
+      "course": "RS121",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     },
     {
       "user": "901",
-      "course": "RS121"
+      "course": "RS121",
+      "grade": 100,
+      "letterGrade": "A",
+      "enrollmentDate": "2020-10-01",
+      "status": "ENROLLED"
     }
   ]
   

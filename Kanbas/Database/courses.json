@@ -1,7 +1,7 @@
  [
     {
         "name": "React JS",
-        "number": "CS1234",
+        "number": "CS101",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
         "department": "CS123",
@@ -12,7 +12,7 @@
     },
     {
         "name": "Japanese",
-        "number": "JPL1000",
+        "number": "JPL101",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
         "department": "JP123",
@@ -23,7 +23,7 @@
     },
     {
         "name": "Geoguessr",
-        "number": "GEO9999",
+        "number": "GEO101",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
         "department": "GEO123",
@@ -34,7 +34,7 @@
     },
     {
         "name": "Guitar Class",
-        "number": "GUIT2000",
+        "number": "GUIT101",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
         "department": "MUSIC123",
@@ -45,7 +45,7 @@
     },
     {
         "name": "Ballroom Dancing",
-        "number": "DNCE1001",
+        "number": "DNCE101",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
         "department": "DANCE123",
@@ -56,7 +56,7 @@
     },
     {
         "name": "Algorithms and Data Structures",
-        "number": "CS3000",
+        "number": "CS102",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
         "department": "CS123",
@@ -67,7 +67,7 @@
     },
     {
         "name": "Chess Openings",
-        "number": "CHSS3500",
+        "number": "CHSS101",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
         "department": "CHESS123",
@@ -78,7 +78,7 @@
     },
     {
       "name": "Rocket Propulsion",
-      "number": "RS4550",
+      "number": "RS101",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
       "department": "D123",
@@ -89,7 +89,7 @@
     },
     {
       "name": "Aerodynamics",
-      "number": "RS4560",
+      "number": "RS102",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
       "department": "D123",
@@ -100,7 +100,7 @@
     },
     {
       "name": "Spacecraft Design",
-      "number": "RS4570",
+      "number": "RS103",
       "startDate": "2023-01-10",
       "endDate": "2023-05-15",
       "department": "D123",

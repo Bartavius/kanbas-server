@@ -13,7 +13,7 @@ export default [
     },
     {
         "name": "Japanese",
-        "number": "JPL1000",
+        "number": "JPL101",
         "startDate": "2023-01-10",
         "endDate": "2023-05-15",
         "department": "JP123",
