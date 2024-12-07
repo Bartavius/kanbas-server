@@ -6,16 +6,11 @@ export function findAllCourses() {
   return model.find();
 }
 
-export function findCoursesForEnrolledUser(userId) {
-  const { courses, enrollments } = Database;
-  const enrolledCourses = courses.filter((course) =>
-    enrollments.some(
-      (enrollment) =>
-        enrollment.user === userId && enrollment.course === course._id
-    )
-  );
-  return enrolledCourses;
-}
+export async function findCoursesForUser(userId) {
+    const enrollments = await enrollmentModel.find({ user: userId }).populate("course");
+    return enrollments.map((enrollment) => enrollment.course);
+   }
+   
 
 export function createCourse(course) {
   delete course._id;
