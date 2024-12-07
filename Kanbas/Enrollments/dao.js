@@ -1,4 +1,3 @@
-import Database from "../Database/index.js";
 import model from "./model.js";
 
 export function enrollUserInCourse(user, course) {
@@ -25,11 +24,11 @@ export function getEnrollments() {
     return model.find();
   }
 
-export function findPeopleInCourse(courseId) {
-    const {users, enrollments} = Database;
-    const peopleInCourse = users
-        .filter((usr) =>
-          enrollments.some((enrollment) => enrollment.user === usr._id && enrollment.course === courseId))
-    return peopleInCourse;
-}
+// export function findPeopleInCourse(courseId) {
+//     const {users, enrollments} = Database;
+//     const peopleInCourse = users
+//         .filter((usr) =>
+//           enrollments.some((enrollment) => enrollment.user === usr._id && enrollment.course === courseId))
+//     return peopleInCourse;
+// }
   
