@@ -10,20 +10,20 @@ export default function CourseRoutes(app) {
         const newModule = modulesDao.createModule(module);
         res.send(newModule);
       });
-    app.get("/api/courses/:courseId/modules", (req, res) => {
-        const { courseId } = req.params;
-        const modules = modulesDao.findModulesForCourse(courseId);
+    app.get("/api/courses/:cid/modules", (req, res) => {
+        const { cid } = req.params;
+        const modules = modulesDao.findModulesForCourse(cid);
         res.json(modules);
     });
-  app.delete("/api/courses/:courseId", (req, res) => {
-    const { courseId } = req.params;
-    const status = dao.deleteCourse(courseId);
+  app.delete("/api/courses/:cid", async (req, res) => {
+    const { cid } = req.params;
+    const status = await dao.deleteCourse(cid);
     res.send(status);
   });
-  app.put("/api/courses/:courseId", (req, res) => {
+  app.put("/api/courses/:courseId", async (req, res) => {
     const { courseId } = req.params;
     const courseUpdates = req.body;
-    const status = dao.updateCourse(courseId, courseUpdates);
+    const status = await dao.updateCourse(courseId, courseUpdates);
     if (!status) {
         res.status(400).json(
           { message: "Please select a course to edit first." });

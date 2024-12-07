@@ -11,7 +11,7 @@ const courseSchema = new mongoose.Schema(
    description: String,
    image: {
     type: String,
-    default: "/images/reactjs.jpg"
+    default: "reactjs.jpg"
    },
    author: String,
  },
