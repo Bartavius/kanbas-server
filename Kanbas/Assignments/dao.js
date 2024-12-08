@@ -1,20 +1,27 @@
-import Database from "../Database/index.js";
 import formatDate from "./formatDate.js";
+import model from "./model.js";
 
 export function getCourseAssignments(courseId) {
-    const {assignments} = Database;
-    return assignments.filter( (a) => a.course === courseId);
+    return model.find({course: courseId});
 }
 
-export function getAssignmentById(courseId, assignmentId) {
-    const {assignments} = Database;
-    return assignments.find((a) => a._id === assignmentId && a.course === courseId);
+// for testing purposes
+export function getAllAssignments() {
+    return model.find();
 }
 
-export function createAssignment(courseId, assignmentId) {
-    const {assignments} = Database;
+export function getAssignmentsByCourseAndGroup(courseId, group) {
+    return model.find({course: courseId, assignment_group: group});
+}
 
-    const today = new Date(Number(assignmentId));
+
+export function getAssignmentById(assignmentId) { // fix the route for this, initially had two params
+    return model.findOne({_id: assignmentId})
+}
+
+export async function createAssignment(courseId) { // remove aid -- also change route aid
+
+    const today = new Date();
     const tomorrow = new Date(today);
     tomorrow.setDate(tomorrow.getDate() + 1);
     const twoDays = new Date(tomorrow);
@@ -22,33 +29,28 @@ export function createAssignment(courseId, assignmentId) {
 
     const formattedToday = formatDate(today);
     const formattedTomorrow = formatDate(tomorrow);
-    const formattedTwoDays = formatDate(twoDays);//
+    const formattedTwoDays = formatDate(twoDays);
 
     const assignment = {
-      _id: assignmentId,
-      title: "New Assignment",
+      title: `New Assignment${await model.countDocuments({course: courseId})}`,
       description: "New Assignment",
-      points: "100",
-      assignment_group: "assignments",
+      points: 100,
+      assignment_group: "ASSIGNMENT",
       submission_type: "online",
-      display_grade_as: "percentage",
-      assign_to: "everyone",
+      display_grade_as: "PERCENTAGE",
+      assign_to: "EVERYONE",
       due_date: formattedTomorrow,
       available_from: formattedToday,
       available_until: formattedTwoDays,
       course: courseId,
     }
-    Database.assignments = [...assignments, assignment];
-    return assignment;
+    return model.create(assignment);
 }
 
-export function updateAssignment(cid, aid, newAssignment) {
-    const { assignments } = Database;
-    Database.assignments = assignments.map((a) => a._id === aid && a.course ===cid ? newAssignment : a);
-    return newAssignment;
+export function updateAssignment(aid, newAssignment) { // take cid out from route and client
+    return model.updateOne({_id: aid}, {$set: newAssignment})
 }
 
-export function deleteAssignment(cid, aid) {
-    const { assignments } = Database;
-    Database.assignments = assignments.filter( (a) => !(a.course === cid && a._id === aid));
+export function deleteAssignment(aid) { // take cid out from route client
+    return model.deleteMany({_id: aid})
 }

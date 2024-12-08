@@ -1,5 +1,6 @@
 import mongoose from "mongoose";
 // start/end date are strings for now but will eventually be stored as Date
+// author will eventuall be user objectID when newer functions are implemented
 const courseSchema = new mongoose.Schema(
  {
    name: String,
