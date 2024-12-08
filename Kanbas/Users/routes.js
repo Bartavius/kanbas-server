@@ -8,7 +8,8 @@ export default function UserRoutes(app) {
     res.send(newUser); // check this
   };
   const deleteUser = async (req, res) => { 
-    const status = await dao.deleteUser(req.body._id);
+    const {userId} = req.params;
+    const status = await dao.deleteUser(userId);
     res.send(status);
   };
 
@@ -38,7 +39,7 @@ export default function UserRoutes(app) {
         { message: "Username already in use" });
       return;
     }
-    const currentUser = dao.createUser(req.body);
+    const currentUser = await dao.createUser(req.body);
     req.session["currentUser"] = currentUser;
     res.json(currentUser);
   };

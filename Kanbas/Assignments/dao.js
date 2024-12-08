@@ -36,7 +36,7 @@ export async function createAssignment(courseId) { // remove aid -- also change 
       description: "New Assignment",
       points: 100,
       assignment_group: "ASSIGNMENT",
-      submission_type: "online",
+      submission_type: "ONLINE",
       display_grade_as: "PERCENTAGE",
       assign_to: "EVERYONE",
       due_date: formattedTomorrow,
