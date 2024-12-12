@@ -7,7 +7,7 @@ const quizSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "CourseModel"
   },
-  QuizType: {
+  quizType: {
     type: String,
     enum: ["GRADED_QUIZ", "PRACTICE_QUIZ", "GRADED_SURVEY", "UNGRADED_SURVEY"],
     default: "GRADED_QUIZ",
@@ -20,6 +20,7 @@ const quizSchema = new mongoose.Schema({
   },
   available_from: Date,
   available_until: Date,
+  due_date: Date,
   assign_to: {
     type: String,
     enum: ["EVERYONE"],
@@ -72,29 +73,18 @@ const quizSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
-  due_date: Date,
-  available_from: Date,
-  available_until: Date,
-
-  questions: [ // TODO
+  questions: [
     {
-      description: {
-        type: String,
-        required: true,
-      },
-      point: Number, // point per question
-      questionType: {
-        type: String,
-        enum: ["TRUE-FALSE", "MC", "FILLBLANK"],
-        default: "MC",
-      },
-      answers: [ // TODO OR TO BE DESIGNED
-        {
-          type: String
-        },
-      ],
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "QuestionModel",
+      
     },
   ],
+  published: {
+    type: Boolean,
+    default: false
+  }
 }, {collection: "quizzes"});
 
 export default quizSchema
+ 
