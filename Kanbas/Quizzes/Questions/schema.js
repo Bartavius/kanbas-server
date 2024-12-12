@@ -1,10 +1,6 @@
 import mongoose from "mongoose";
 const questionSchema = new mongoose.Schema({
-  course: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "CourseModel",
-  },
-  question: {
+  quiz: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "QuizModel",
   },
@@ -17,14 +13,7 @@ const questionSchema = new mongoose.Schema({
     type: String,
     enum: ["TRUE-FALSE", "MC", "FILLBLANK"],
     default: "MC",
-  },
-  answers: [
-    {
-      answerText: String,
-      isCorrect: Boolean
-    }
-  ],
-  alternativeAnswers: [String]
+  }
 }, {
   collection: "questions",
 });

@@ -1,7 +1,13 @@
 import model from "./model.js";
+import answerModel from "./Questions/Answers/model.js"
+import questionModel from "./Questions/model.js"
 
 export function getAllQuizzesFromCourse(cid) {
     return model.find( {course: cid} )
+}
+
+export function getQuestion(qid) {
+    return model.findOne({_id: qid});
 }
 
 export async function addQuizToCourse(cid) {
@@ -38,6 +44,8 @@ export async function addQuizToCourse(cid) {
 
 }
 export function removeQuiz(qid) {
+    answerModel.deleteMany( {quiz: qid});
+    questionModel.deleteMany( {quiz: qid} );
     return model.deleteOne( {_id: qid } );
 }
 export function updateQuiz(qid, newQuiz) {
