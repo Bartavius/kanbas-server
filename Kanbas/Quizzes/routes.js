@@ -1,7 +1,6 @@
 import * as dao from "./dao.js";
 import * as attemptDao from "./QuizAttempts/dao.js";
 import * as questionDao from "./Questions/dao.js";
-import * as answerDao from "./Questions/Answers/dao.js";
 
 export default function QuizRoutes(app) {
   app.post("/api/quizzes/:uid/:qid/attempt", async (req, res) => {
@@ -19,40 +18,40 @@ export default function QuizRoutes(app) {
     const x = await attemptDao.updateAttempt(attemptId, req.body)
     res.send(x);
   });
-  app.post("/api/quizzes/:quizId/question/:quesId/answers", async (req, res) => {
-    const { quizId,quesId } = req.params;
-    const answers = await answerDao.createAnswer(quizId,quesId);
-    console.log(answers);
-    res.send(answers);
-  });
+  // app.post("/api/quizzes/:quizId/question/:quesId/answers", async (req, res) => {
+  //   const { quizId,quesId } = req.params;
+  //   const answers = await answerDao.createAnswer(quizId,quesId);
+  //   console.log(answers);
+  //   res.send(answers);
+  // });
   app.get("/api/quizzes/question/get/get/:qid", async (req, res) => {
     const { qid } = req.params;
     const answers = await questionDao.getQuestion(qid);
     res.send(answers);
   }); 
 
-  app.get("/api/quizzes/question/:qid/answers", async (req, res) => {
-    const { qid } = req.params;
-    const answers = await answerDao.getAnswersFromQuestion(qid);
-    res.send(answers);
-  });
+  // app.get("/api/quizzes/question/:qid/answers", async (req, res) => {
+  //   const { qid } = req.params;
+  //   const answers = await answerDao.getAnswersFromQuestion(qid);
+  //   res.send(answers);
+  // });
   
-  app.delete("/api/quizzes/question/:qid/answers/:ansId", async (req, res) => {
-    const { ansId } = req.params;
-    const answers = await answerDao.deleteAnswer(ansId);
-    res.send(answers);
-  });
-  app.put("/api/quizzes/answers/update/:ansId", async (req, res) => {
-    const { ansId } = req.params;
-    const newAns = req.body;
-    const answers = await answerDao.updateAnswer(ansId, newAns);
-    res.send(answers);
-  });
-  app.get("/api/quizzes/:qid/answers", async (req, res) => {
-    const { qid } = req.params;
-    const answers = await answerDao.getAnswer(qid);
-    res.send(answers);
-  });
+  // app.delete("/api/quizzes/question/:qid/answers/:ansId", async (req, res) => {
+  //   const { ansId } = req.params;
+  //   const answers = await answerDao.deleteAnswer(ansId);
+  //   res.send(answers);
+  // });
+  // app.put("/api/quizzes/answers/update/:ansId", async (req, res) => {
+  //   const { ansId } = req.params;
+  //   const newAns = req.body;
+  //   const answers = await answerDao.updateAnswer(ansId, newAns);
+  //   res.send(answers);
+  // });
+  // app.get("/api/quizzes/:qid/answers", async (req, res) => {
+  //   const { qid } = req.params;
+  //   const answers = await answerDao.getAnswer(qid);
+  //   res.send(answers);
+  // });
 
   app.get("/api/quizzes/detail/:qid", async (req, res) => {
     const { qid } = req.params;

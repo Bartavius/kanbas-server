@@ -1,5 +1,4 @@
 import model from "./model.js";
-import answerModel from "./Questions/Answers/model.js"
 import questionModel from "./Questions/model.js"
 
 export function getAllQuizzesFromCourse(cid) {
@@ -44,7 +43,6 @@ export async function addQuizToCourse(cid) {
 
 }
 export function removeQuiz(qid) {
-    answerModel.deleteMany( {quiz: qid});
     questionModel.deleteMany( {quiz: qid} );
     return model.deleteOne( {_id: qid } );
 }

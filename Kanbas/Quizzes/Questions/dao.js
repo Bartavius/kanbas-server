@@ -14,7 +14,8 @@ export async function addQuestionForQuiz(qid) {
       quiz: qid,
       questionText: `New Question ${(await model.find()).length}`,
       point: 1,
-      questionType: "MC"
+      questionType: "MC",
+      answers: []
     }
     const newQ = await model.create(newQuestion);
     const quiz = await quizModel.findOne({_id: qid});

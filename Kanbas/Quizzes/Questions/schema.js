@@ -13,7 +13,15 @@ const questionSchema = new mongoose.Schema({
     type: String,
     enum: ["TRUE-FALSE", "MC", "FILLBLANK"],
     default: "MC",
-  }
+  },
+  answers: [
+    {
+      _id: String,
+      answerText: String,
+      isCorrect: Boolean,
+      display: Boolean 
+    }
+  ]
 }, {
   collection: "questions",
 });
