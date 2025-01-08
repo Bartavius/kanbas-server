@@ -12,7 +12,7 @@ export function getQuestion(qid) {
 export async function addQuestionForQuiz(qid) {
     const newQuestion = { 
       quiz: qid,
-      questionText: `New Question ${(await model.find()).length}`,
+      questionText: `New Question ${(await model.find({quiz: qid})).length}`,
       point: 1,
       questionType: "MC",
       answers: []
