@@ -15,7 +15,7 @@ const quizAttemptsSchema = new mongoose.Schema(
                     type: mongoose.Schema.Types.ObjectId,
                     ref: "QuestionModel",
                 },
-                userReponse: {
+                userResponse: {
                     type: String,
                     default: ""
                 },

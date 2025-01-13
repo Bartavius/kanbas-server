@@ -13,6 +13,11 @@ export default function QuizRoutes(app) {
     const response = await attemptDao.getLastAttempt(uid, qid);
     res.send(response);
   });
+  app.put("/api/quizzes/attempt/:attemptId/:quesId/upgrade", async (req, res) => {
+    const {attemptId, quesId} = req.params;
+    const x = await attemptDao.updateQuestionResponse(quesId, attemptId, req.body)
+    res.send(x);
+  });
   app.put("/api/quizzes/attempt/:attemptId/upgrade", async (req, res) => {
     const {attemptId} = req.params;
     const x = await attemptDao.updateAttempt(attemptId, req.body)
@@ -24,7 +29,7 @@ export default function QuizRoutes(app) {
   //   console.log(answers);
   //   res.send(answers);
   // });
-  app.get("/api/quizzes/question/get/get/:qid", async (req, res) => {
+  app.get("/api/quizzes/question/get/:qid", async (req, res) => {
     const { qid } = req.params;
     const answers = await questionDao.getQuestion(qid);
     res.send(answers);

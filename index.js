@@ -39,7 +39,7 @@ app.use(session(sessionOptions));
 
 app.use(express.json());
 Hello(app);
-Lab5(app);
+// Lab5(app);
 UserRoutes(app);
 EnrollmentRoutes(app);
 QuizRoutes(app);
