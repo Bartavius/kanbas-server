@@ -1,1 +1,2 @@
-# cs4550-test-server
+# Server-side application to Kanbas.
+
