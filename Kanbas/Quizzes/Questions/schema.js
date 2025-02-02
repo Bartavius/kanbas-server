@@ -22,7 +22,7 @@ const questionSchema = new mongoose.Schema({
       display: Boolean 
     }
   ]
-}, {
+}, { 
   collection: "questions",
 });
 export default questionSchema;
