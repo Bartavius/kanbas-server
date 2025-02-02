@@ -1,3 +1,8 @@
-/.env
-node_modules
-Lab5
+# Ignore node_modules
+node_modules/
+
+# Ignore env
+.env
+
+# Ignore labs
+Lab5/
